@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:notion/tutorial_10-2.dart';
+import 'package:notion/tutorial_11-1.dart';
 void main(){
   runApp(new MaterialApp(
     home: new HalHallo(),
@@ -7,29 +9,29 @@ void main(){
 class HalHallo extends StatelessWidget{
   @override
   Widget build(BuildContext context){
-    return new Scaffold(
-      body: new Container(
+    return Scaffold(
+      body: Container(
           margin: EdgeInsets.only(left: 20),
-          child: new Column(
+          child: Column(
           children: [
-            new Row(
+            Row(
               children: [
-                new Column(
+                Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    new Text('Welcome,',
-                      style: new TextStyle(color: Colors.purple,
+                    Text('Welcome,',
+                      style: TextStyle(color: Colors.purple,
                           fontFamily: "Serif",fontSize: 30.0,fontWeight: FontWeight.bold),),
-                    new Text('1301213053 - Aldi M.F',
-                      style: new TextStyle(fontFamily: "Serif",
+                    Text('1301213053 - Aldi M.F',
+                      style: TextStyle(fontFamily: "Serif",
                           fontSize: 15.0,fontWeight: FontWeight.bold),)
                   ],
                 ),
                 Spacer(),
-                new Icon(Icons.circle,color: Colors.blue[700],size: 72.0),
+                Icon(Icons.circle,color: Colors.blue[700],size: 72.0),
               ],
             ),
-              new Container(
+              Container(
                 margin: EdgeInsets.all(30),
                 padding: EdgeInsets.all(10),
                 width: 360.0,
@@ -45,38 +47,56 @@ class HalHallo extends StatelessWidget{
                   ),
                   borderRadius: BorderRadius.all(Radius.circular(10.0)),
                 ),
-                child: new Column(
+                child: Column(
                   children: [
-                    new Text('Status tes TOEFL Anda:',
-                      style: new TextStyle(fontFamily: "Serif",
+                    Text('Status tes TOEFL Anda:',
+                      style: TextStyle(fontFamily: "Serif",
                           color: Colors.white,fontSize: 15.0,fontWeight: FontWeight.bold),),
                     SizedBox(height: 10.0),
-                    new Text('LULUS',
-                      style: new TextStyle(fontFamily: "Serif",
+                    Text('LULUS',
+                      style: TextStyle(fontFamily: "Serif",
                           color: Colors.white,fontSize: 30.0,fontWeight: FontWeight.bold),),
                     SizedBox(height: 20.0),
-                    new Row(
+                    Row(
                       children: [
-                        new Text('Listening \n     80',
-                          style: new TextStyle(fontFamily: "Serif",
+                        Text('Listening \n     80',
+                          style: TextStyle(fontFamily: "Serif",
                               color: Colors.white,fontSize: 15.0,fontWeight: FontWeight.bold),),
                         SizedBox(width: 72.0),
-                        new Text('Structure \n      80',
-                          style: new TextStyle(fontFamily: "Serif",
+                        Text('Structure \n      80',
+                          style: TextStyle(fontFamily: "Serif",
                               color: Colors.white,fontSize: 15.0,fontWeight: FontWeight.bold),),
                         SizedBox(width: 72.0),
-                        new Text('Reading \n    90',
-                          style: new TextStyle(fontFamily: "Serif",
+                        Text('Reading \n    90',
+                          style: TextStyle(fontFamily: "Serif",
                               color: Colors.white,fontSize: 15.0,fontWeight: FontWeight.bold),),
                       ],
                     ),
                   ],
                 ),
               ),
-            new Text('Riwayat Tes',
-              style: new TextStyle(fontFamily: "Serif",fontSize: 35.0,fontWeight: FontWeight.w800),),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 30),
+              child: InkWell(
+                child: Text('Go to Tutorial 10-2',style: TextStyle(color: Colors.indigo,fontSize: 26)
+                ),
+                onTap: (){
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>const MyApp10_2()));
+                },
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 30),
+              child: InkWell(
+                child: Text('Go to Tutorial 11-1',style: TextStyle(color: Colors.indigo,fontSize: 26)
+                ),
+                onTap: (){
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>const MyApp11_1()));
+                },
+              ),
+            )
           ],
-        )
+        ),
       ),
     );
   }
