@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notion/tutorial_11-2.dart';
 import 'main.dart';
 
 void main(){
@@ -56,7 +57,9 @@ class _MyHomePageState extends State<MyHomePage>{
             ),
             Center(
               child: Text('Email page',style: TextStyle(fontSize: 30)),
-            ),Center(
+            ),
+            MyApp11_2(),
+            Center(
               child: Text('Profile page',style: TextStyle(fontSize: 30)),
             ),
           ],
