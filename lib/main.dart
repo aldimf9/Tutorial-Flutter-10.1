@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:notion/tutorial_10-2.dart';
 import 'package:notion/tutorial_11-1.dart';
+import 'package:notion/tutorial_12.dart';
 void main(){
   runApp(new MaterialApp(
     home: new HalHallo(),
@@ -94,7 +95,17 @@ class HalHallo extends StatelessWidget{
                   Navigator.push(context,MaterialPageRoute(builder: (context)=>const MyApp11_1()));
                 },
               ),
-            )
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 30),
+              child: InkWell(
+                child: Text('Go to Tutorial 12',style: TextStyle(color: Colors.indigo,fontSize: 26)
+                ),
+                onTap: (){
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>const MyApp12()));
+                },
+              ),
+            ),
           ],
         ),
       ),
